@@ -550,7 +550,7 @@ screen about():
 
             ## gui.about 通常在 options.rpy 中设置。
             if gui.about:
-                text "[gui.about!t]\n"
+                text "[gui.about!ti]\n"
 
             text _("引擎：{a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only]\n\n[renpy.license!t]")
 

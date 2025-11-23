@@ -85,6 +85,13 @@ init python:
             for line in self.matrix:
                 print(line,end="\n")
 
+        @property
+        def maxscore(self):
+            _maxscore=0
+            for line in self.matrix:
+                if _maxscore<max(line):
+                    _maxscore=max(line)
+            return _maxscore
 
 
 
