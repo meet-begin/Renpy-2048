@@ -14,7 +14,7 @@ init python:
 
         def move(self,inverse=False):#True 就是向右合并/向下合并
             for k in range(len(self.matrix)):
-                _list =self.matrix[k]
+                _list =(self.matrix[k]).copy()
                 if inverse:
                     _list.reverse()
                 _xxlist = [i for i in _list if i !=0] #去掉所有0
@@ -29,7 +29,7 @@ init python:
                     _xxlist.append(0)
                 if inverse:
                     _xxlist.reverse()
-                self.matrix[k]=_xxlist
+                self.matrix[k]=_xxlist.copy()
 
 
 
@@ -38,7 +38,7 @@ init python:
             if isfull ==False:
                 return False
             for k in range(len(self.matrix)):
-                _list =self.matrix[k]
+                _list =self.matrix[k].copy()
                 if inverse:
                     _list.reverse()
                 _xxlist = [i for i in _list if i !=0] #去掉所有0
@@ -86,12 +86,12 @@ init python:
                 print(line,end="\n")
 
         @property
-        def maxscore(self):
-            _maxscore=0
+        def maxnum(self):
+            _maxnum=0
             for line in self.matrix:
-                if _maxscore<max(line):
-                    _maxscore=max(line)
-            return _maxscore
+                if _maxnum<max(line):
+                    _maxnum=max(line)
+            return _maxnum
 
 
 

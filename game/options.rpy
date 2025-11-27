@@ -28,7 +28,7 @@ define config.version = "1.0"
 ## 行。
 
 define gui.about = _p("""
-    最高分：[persistent.maxscore]
+    最大合成：[persistent.maxnum]
 """)
 
 

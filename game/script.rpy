@@ -1,5 +1,5 @@
 ﻿define e = Character("kuro")
-default persistent.maxscore=0
+default persistent.maxnum=0
 init python:
     #游戏主逻辑
     def good(direct):
@@ -29,6 +29,7 @@ label start:
             $ a.random_num()
     show screen board2(a.matrix)
     show screen direction_control
+    show screen inform
     window hide
     pause
     jump loop
@@ -42,8 +43,8 @@ label loop:
 
 
 label gg:
-    e "才玩了[a.maxscore]分"
-    e "说白了你就是菜"
-    $ persistent.maxscore=a.maxscore
+    e "才合出[a.maxnum]，"
+    e "说白了你就是菜。"
+    $ persistent.maxnum=a.maxnum
     return
 

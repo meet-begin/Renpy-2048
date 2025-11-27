@@ -130,8 +130,8 @@ screen inform():
         xalign 0.9
         background None
         vbox:
-            text "历史最高分：[persistent.maxscore]" color "#f9f6f2" size 30
-            text "目前分数：[a.maxscore]" color "#f9f6f2" size 30
+            text "历史最大合成：[persistent.maxnum]" color "#f9f6f2" size 30
+            text "目前最大合成：[a.maxnum]" color "#f9f6f2" size 30
             
             
 
